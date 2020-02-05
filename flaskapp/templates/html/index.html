@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron's Homework 1 Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/index.css')}}">
+    <!-- remove the shortcut icon. -->
+    <link rel="shortcut icon" href="{{url_for('static', filename='Images/shortcut.ico')}}">
+</head>
+<body>
+    <!--//// Header //////
+       //////////////////-->
+    <header>
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li style="float:right;" class = "signin-bord"><a href="/sign-up/">Sign Up</a></li>
+                <li style="float:right;" class = "signin-bord"><a href="/login/">Login</a></li>
+                <li style="float:right;" class = "signin-bord"><a href="/logout/">Logout</a></li>
+                <li style="float:right;" class = "signin-bord"><a href="/home/">Home</a></li>
+            </ul>
+        </nav>
+        <!-- <h1>This is the website for CJ</h1>  -->
+    </header>
+
+    <!--//// Main Body ///
+       //////////////////-->
+    <main>
+        <section class="main-body">
+            <div class="content-wrap log-button">
+                <ul>
+                    <li><a href="/sign-up/">Sign Up!</a></li>
+                    <li><a href="/login/">Login!</a></li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!--//// Footer //////
+       //////////////////-->
+    <footer>
+        <div class="content-wrap">
+            <!-- Social media and contact links. Add or remove any networks. -->
+            <div class="contact-info">
+                <a href="mailto:email@example.com">email@example.com</a>
+                <a href="http://yourwebsite.com">yourwebsite.com</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Facebook</a>
+            </div>
+        
+        <p>Copyright Aaron Suchovsky</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

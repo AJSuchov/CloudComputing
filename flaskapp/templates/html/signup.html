@@ -1,0 +1,89 @@
+<!-- Base look -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron's Homework</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/index.css')}}">
+    <!-- Remove the shortcut.ico -->
+    <link rel="shortcut icon" href="{{url_for('static', filename='Images/shortcut.ico')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/forums.css')}}">
+    <!-- Dont mess with this import -->
+    
+</head>
+<body>
+    <!--//// Header //////
+       //////////////////-->
+    <header>
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li style="float:right;" class = "signin-bord"><a href="/sign-up/">Sign Up</a></li>
+                <li style="float:right;" class = "signin-bord"><a href="/login/">Login</a></li>
+                <li style="float:right;" class = "signin-bord"><a href="/logout/">Logout</a></li>
+                <li style="float:right;" class = "signin-bord"><a href="/home/">Home</a></li>
+            </ul>
+        </nav>
+        <!-- <h1>This is the website for CJ</h1>  -->
+    </header>
+
+    <!--//// Main Body ///
+       //////////////////-->
+    <main>
+        <section class="main-body" style="height: 100vh;">
+            <div class="loginbox" style="height: 700px">
+
+                <!-- Avatart image may need to be changed. -->
+                <img src= "{{url_for('static', filename='Images/User_Avatar-512.png')}}" class= "avatar">
+                <h1>Sign Up Here!</h1>
+                <form method="POST" action="/sign-up/">
+                    <!-- sends this information to the sql database. -->
+                    <dl>
+                        <p>Username/Email</p>
+                        <input type="text" name="username" placeholder="Enter Username or Email" value="{{request.form.username}}">
+                        <p>Password</p>
+                        <input type="password" name="password" placeholder="Enter Password" value="{{request.form.password}}">
+                        <p>Confirm Password</p>
+                        <input type="password" name="password2" placeholder="Confirm Password" value="{{request.form.password2}}">
+                        <p>First Name</p>
+                        <input type="text" name="firstname" placeholder="First Name" value="{{request.form.firstname}}">
+                        <p>Last Name</p>
+                        <input type="text" name="lastname" placeholder="Last Name" value="{{request.form.lastname}}">
+                        <p>Email</p>
+                        <input type="text" name="email" placeholder="Email" value="{{request.form.email}}">
+                    </dl>
+                    <p><input type=submit value=submit></p>
+                </form>
+                
+                <!-- This will state what the error is with what the person put into the fields above. -->
+                {% if error %}
+                    <p class="error"><strong>Error:</strong>The problem is: {{error}}</p>
+                {% endif %}
+
+            </div>
+        </section>
+    </main>
+
+    <!--//// Footer //////
+       //////////////////-->
+    <footer style="position: relative;">
+        <div class="content-wrap">
+            <!-- Social media and contact links. Add or remove any networks. -->
+            <div class="contact-info">
+                <a href="mailto:email@example.com">email@example.com</a>
+                <a href="http://yourwebsite.com">yourwebsite.com</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Facebook</a>
+            </div>
+        
+        <p>Copyright 2020 Aaron Suchovsky</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>
+

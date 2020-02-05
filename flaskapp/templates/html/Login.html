@@ -1,0 +1,73 @@
+<!-- Base look -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aaron's Homework 1</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/index.css')}}">
+    <!-- remove the shortcut icon. -->
+    <link rel="shortcut icon" href="{{url_for('static', filename='Images/shortcut.ico')}}">
+    <!-- Do not remove forums.css -->
+    <link rel="stylesheet" href="{{url_for('static', filename='CSS/forums.css')}}">
+</head>
+<body>
+    <!--//// Header //////
+       //////////////////-->
+    <header>
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li style="float:right;" class = "signin-bord"><a href="/sign-up/">Sign Up</a></li>
+                <li style="float:right;" class = "signin-bord"><a href="/login/">Login</a></li>
+                <li style="float:right;" class = "signin-bord"><a href="/logout/">Logout</a></li>
+                <li style="float:right;" class = "signin-bord"><a href="/home/">Home</a></li>
+            </ul>
+        </nav>
+        <!-- <h1>This is the website for CJ</h1>  -->
+    </header>
+
+    <!--//// Main Body ///
+       //////////////////-->
+    <main>
+        
+        <section class="main-body" style="height: 100vh;">
+            <div class="loginbox">
+                <img src= "{{url_for('static', filename='Images/User_Avatar-512.png')}}" class= "avatar">
+                <h1>Login Here!</h1>
+                <form action="" method="post">
+                    <p>Username/Email</p>
+                    <input type="text" name="username" placeholder="Enter Username or Email" value="{{request.form.username}}">
+                    <p>Password</p>
+                    <input type="password" name="password" placeholder="Enter Password" value="{{request.form.password}}">
+                    <input type="submit" name="" value="Login">
+                    <a href="#">Lost you Password?</a><br>
+                    <a href="#">Dont have account?</a>
+                </form>
+
+                <p>{{error}}</p>
+            </div>
+        </section>
+    </main>
+
+    <!--//// Footer //////
+       //////////////////-->
+    <footer style="position: relative;">
+        <div class="content-wrap">
+            <!-- Social media and contact links. Add or remove any networks. -->
+            <div class="contact-info">
+                <a href="mailto:email@example.com">email@example.com</a>
+                <a href="http://yourwebsite.com">yourwebsite.com</a>
+                <a href="#">Twitter</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Facebook</a>
+            </div>
+        
+        <p>Copyright 2020 Aaron</p>
+        </div>
+    </footer>
+
+
+</body>
+</html>

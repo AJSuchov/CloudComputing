@@ -1,0 +1,202 @@
+/*This is mainly for the Home page*/
+/* Color Scheme
+  #0A0401: Rich Black
+  #EDF4F1: Anti-Flash White
+  #5b0100: Falu Red
+  #434749: Outer Space Grey
+  #A39892: Spanish Grey
+
+  Others:
+  #333: Grey From Examples
+  #bbb: White
+  #111: Black
+*/
+
+/* /// Global /// 
+  ////////////// */
+
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+.container-fluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+body{
+    margin: 0;
+}
+
+/* Content will wrap when the page size is changed */
+.content-wrap{
+  max-width: 950px;
+  margin: 0 auto;
+  padding: 45px 50px 0px 50px;
+  overflow: hidden;
+}
+
+/* Left side of a split web page */
+.col-left {
+width: 25%;
+float: left;
+}
+
+/* Right side of a split web page */
+.col-right {
+width: 75%;
+float: left;
+padding-left: 20px;
+}
+
+/* Color for header and footer */
+header, 
+footer {
+  background:#0A0401;
+  color: #EDF4F1;
+}
+
+/*   /// Header ///// 
+    ////////////////  */
+header{
+    padding-top: 45px;
+    padding-bottom: 1px;
+    position: relative;
+    background-color: blue;
+    width: 100%;
+    text-align: center;
+}
+
+/* Navigation bar */
+nav{
+  width: 100%;
+  top: 0;
+  position: absolute;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:black;
+}
+
+nav li {
+  float: left;
+  border-right:1px solid #EDF4F1;
+}
+
+nav li:last-child {
+  border-right: none;
+}
+
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+nav li a:hover:not(.active) {
+  background-color: #5b0100;
+}
+
+/* .active {
+  background-color: #A39892;
+} */
+
+/* Sign-In Button */
+.signin-bord{
+    border-left: 1px solid #bbb;
+}
+
+/* /// Main Body /// 
+  ///////////////// */
+.main-body{
+  background: linear-gradient(rgba(141, 153, 174, 0.8), rgba(141, 153, 174, 0.5)),
+  url(../Images/AJBackground.jpg) no-repeat fixed; /* This is the universal background image that should be changed */
+  background-size: cover;
+  background-position:center;
+  height: 84vh;
+}
+
+
+.log-button{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.log-button ul{
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+}
+
+.log-button ul li{
+  background-color: #f1f1f1;
+  list-style: none;
+  border: none;
+  font-size: 16px;
+  padding: 16px 30px;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  margin: 20px; 
+  text-decoration: none;
+}
+
+.log-button ul li:hover{
+  background-color: #434749;
+  color: white;
+}
+
+.log-button ul li a{
+  text-decoration: none;
+  padding: 15px 35px;
+  display: block;
+  text-align: center;
+}
+
+/* /// Footer ///
+  ////////////// */
+footer{
+    padding: 0px 50px 0px 50px;
+    text-align: center;
+    bottom: 0;
+    position: relative;
+    width: 100%;
+}
+.contact-info a {
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+
+/* //// Other Sections //// 
+  //////////////////////// */
+@media (min-width: 900px) {
+  .col-left {
+    width: 25%;
+    float: left;
+}
+  .col-right {
+    width: 75%;
+    float: left;
+    padding-left: 20px;
+  }
+}
+@media (max-width: 899px){
+  header {
+    text-align: center;
+  }
+}
